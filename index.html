@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenScope · Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- header con background -->
+  <header class="site-header">
+    <div class="overlay">
+      <h1>GreenScope</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="graficos.html">Tablero de control</a></li>
+          <li><a href="maqueta.html">Maqueta</a></li> 
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- contenido de inicio -->
+  <main class="content">
+    <h2>¿Qué es GreenScope?</h2>
+    <p>
+      GreenScope es una aplicación web orientada al análisis integral y monitoreo en tiempo real de los factores que inciden en la deforestación, como la temperatura, la actividad agrícola, la ganadería, el uso de agroquímicos y las emisiones sectoriales. La plataforma recopila y centraliza datos ambientales clave a través de procesos automatizados, permitiendo a los usuarios acceder a dashboards interactivos y herramientas analíticas avanzadas, facilitando la toma de decisiones.
+    </p>
+  </main>
+  
+  <section class="features">
+    <h3>Esta solución tecnológica ofrece:</h3>
+    <ul class="features-list">
+      <li>✅ Visualización dinámica de variables ambientales en mapas y gráficos.</li>
+      <li>✅ Seguimiento de cambios en el territorio con base en múltiples fuentes de datos.</li>
+      <li>✅ Alertas configurables ante patrones de riesgo ambiental.</li>
+      <li>✅ Comparación por regiones, periodos y categorías de impacto.</li>
+      <li>✅ Soporte en la toma de decisiones basadas en evidencia.</li>
+    </ul>
+  </section>
+  
+  <!-- sección Visión / Misión -->
+  <section class="cards-section">
+    <div class="card" id="card-vision">
+      <div class="card-title">Visión</div>
+      <div class="card-content">
+        <p>
+          Ser una herramienta de referencia a nivel nacional e internacional en el análisis y monitoreo de la deforestación, promoviendo el uso de tecnologías digitales para prevenir la degradación ambiental y contribuir a la sostenibilidad del planeta mediante el acceso abierto a datos relevantes y visualizaciones claras.
+        </p>
+      </div>
+    </div>
+    <div class="card" id="card-mision">
+      <div class="card-title">Misión</div>
+      <div class="card-content">
+        <p>
+          Desarrollar una plataforma web innovadora que integre y analice datos multivariables relacionados con la deforestación, como la temperatura, la actividad agrícola y ganadera, para facilitar el monitoreo ambiental y apoyar la toma de decisiones informadas por parte de instituciones, investigadores y organizaciones comprometidas con la conservación de los ecosistemas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer con siluetas -->
+  <footer class="site-footer">
+    <p>© 2025 GreenScope</p>
+  </footer>
+
+  <!-- SCRIPT de interacción de las cards -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+          // Cierra las otras
+          document.querySelectorAll('.card').forEach(c => {
+            if (c !== card) c.classList.remove('active');
+          });
+          // Alterna la actual
+          card.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
